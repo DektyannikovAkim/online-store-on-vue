@@ -1,0 +1,13 @@
+{
+    "amount": 0,
+    "countGoods": 0,
+    "contents": [
+        {
+            "id_product": 6,
+            "product_name": "Blazer",
+            "price": 115,
+            "img": "img/product-6.png",
+            "quantity": 3
+        }
+    ]
+}

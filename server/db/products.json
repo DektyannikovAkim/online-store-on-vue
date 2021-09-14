@@ -1,0 +1,51 @@
+[{
+        "id_product": 1,
+        "product_name": "T-shirt",
+        "price": 20
+    },
+    {
+        "id_product": 2,
+        "product_name": "Blouse",
+        "price": 30
+    },
+    {
+        "id_product": 3,
+        "product_name": "Backpack",
+        "price": 50
+    },
+    {
+        "id_product": 4,
+        "product_name": "Blouse",
+        "price": 15
+    },
+    {
+        "id_product": 5,
+        "product_name": "Blouse",
+        "price": 25
+    },
+    {
+        "id_product": 6,
+        "product_name": "Blazer",
+        "price": 115
+    },
+    {
+        "id_product": 7,
+        "product_name": "Pants",
+        "price": 30
+    },
+    {
+        "id_product": 8,
+        "product_name": "Shorts",
+        "price": 25
+    },
+    {
+        "id_product": 9,
+        "product_name": "Jacket",
+        "price": 220
+    },
+    {
+        "id_product": 10,
+        "product_name": "Coat",
+        "price": 250
+    }
+]
