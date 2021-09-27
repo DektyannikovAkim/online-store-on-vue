@@ -26,20 +26,26 @@ const products = {
 
     methods: {
         addInCart(product) {
-            let find = this.$root.$refs.cart.cartItems.find(el => el.id_product === product.id_product);
+            let find = this.$root.$refs.cart.cartItems.contents.find(el => el.id_product === product.id_product);
             if (find) {
                 this.$root.putJson(`/api/cart/${find.id_product}`, { quantity: 1 })
                     .then(data => {
-                        if (data.result === 1) {
-                            find.quantity++;
+                        // if (data.result === 1) {
+                        //     find.quantity++;
+                        // }
+                        if (data) {
+                            this.$root.$refs.cart.cartItems = JSON.parse(data);
                         }
                     })
             } else {
                 product.quantity = 1;
                 this.$root.postJson(`/api/cart`, product)
                     .then(data => {
-                        if (data.result === 1) {
-                            this.$root.$refs.cart.cartItems.push(product);
+                        // if (data.result === 1) {
+                        //     this.$root.$refs.cart.cartItems.contents.push(product);
+                        // }
+                        if (data) {
+                            this.$root.$refs.cart.cartItems = JSON.parse(data);
                         }
                     })
             }

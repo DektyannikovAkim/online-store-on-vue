@@ -1,7 +1,5 @@
 'use strict'
 
-const API = "https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses";
-
 const ProductList = {
     components: {
         'products': products,
@@ -60,11 +58,12 @@ const ProductList = {
                     this.getJson('/api/cart')
                         .then(data => {
                             console.log(data)
-                                // this.cartGoods.push({ amount: data.amount, countGoods: data.countGoods });                          
                             for (item of data.contents) {
                                 item.img = `img/product-${item.id_product}.png`;
                             }
-                            this.$refs.cart.cartItems = data.contents;
+                            this.$refs.cart.cartItems.amount = data.amount;
+                            this.$refs.cart.cartItems.countGoods = data.countGoods;
+                            this.$refs.cart.cartItems.contents = data.contents;
                         });
                 })
                 .catch(error => {

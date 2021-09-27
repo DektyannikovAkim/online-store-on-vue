@@ -2,7 +2,7 @@ const search = {
 
     data() {
         return {
-            catalogUrl: "/catalogData.json",
+            catalogUrl: '/api/products',
             userSearch: ''
         }
     },
@@ -13,6 +13,7 @@ const search = {
             this.$root.getJson(this.catalogUrl).then(data => {
                 data.forEach(item => {
                     if (item.product_name.toLowerCase().includes(userSearch.toLowerCase())) {
+                        item.img = `img/product-${item.id_product}.png`;
                         this.$root.$refs.productComp.products.push(item);
                     }
                 })

@@ -32,12 +32,6 @@ const cartItems = {
 
     methods: {
         removeCartItem(cartItem) {
-            // if (cartItem.quantity > 1) {
-            //     cartItem.quantity = --cartItem.quantity;
-            // } else {
-            //     this.cartItems.splice(this.cartItems.indexOf(cartItem), 1)
-            // }
-
             this.$root.remove(`/api/cart/${cartItem.id_product}`, cartItem)
         },
 
@@ -46,6 +40,9 @@ const cartItems = {
                 .then(data => {
                     if (data.result === 1) {
                         cartItem.quantity++;
+                    }
+                    if (data) {
+                        this.cartItems = JSON.parse(data);
                     }
                 })
         },
@@ -56,8 +53,8 @@ const cartItems = {
             .then(data => {
                 for (item of data.contents) {
                     item.img = `img/product-${item.id_product}.png`;
-                    this.cartItems.push(item);
                 }
+                this.cartItems = data;
             });
     },
 
@@ -67,11 +64,14 @@ const cartItems = {
         <div class="cart-content">
             <button class="close-cart-list" @click="cartShown = !cartShown"></button>
             <cartItem 
-            v-for="cartItem of cartItems"
+            v-for="cartItem of cartItems.contents"
             :key="cartItem.id_product"
             :cartItem="cartItem">
             </cartItem>
-            <span class="no-product-in-cart" v-show="!cartItems.length">У Вас пока что нет товаров в корзине</span>
+            <div v-show="cartItems.amount !== 0" class="payment-info"> 
+            <span> Итого к оплате: {{ cartItems.countGoods }} &#36;</span>
+            </div>
+            <span class="no-product-in-cart" v-show="cartItems.amount === 0">У Вас пока что нет товаров в корзине</span>
         </div>
     </div>
     `

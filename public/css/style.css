@@ -192,8 +192,10 @@ button {
 }
 
 .cart-item-info {
-    margin-left: 25px;
     display: flex;
+    width: 250px;
+    justify-content: space-between;
+    margin-left: 25px;
 }
 
 .wrapper-for-info {
@@ -205,7 +207,6 @@ button {
 .wrapper-for-count-buttons {
     display: flex;
     width: 115px;
-    margin-left: 25px;
     align-items: center;
 }
 
@@ -247,6 +248,13 @@ button {
     border-radius: 0 8px 8px 0;
     background: no-repeat url('../img/add-outline.svg') #ffffff;
     border-left: 1px solid #ddd;
+}
+
+.payment-info {
+    font-size: 22px;
+    font-weight: 600;
+    border-top: 1px solid #000;
+    padding-top: 5px;
 }
 
 .feedback {
