@@ -1,20 +1,5 @@
 {
-    "amount": 2,
-    "countGoods": 65,
-    "contents": [
-        {
-            "id_product": 4,
-            "product_name": "Blouse",
-            "price": 15,
-            "img": "img/product-4.png",
-            "quantity": 1
-        },
-        {
-            "id_product": 3,
-            "product_name": "Backpack",
-            "price": 50,
-            "img": "img/product-3.png",
-            "quantity": 1
-        }
-    ]
+    "amount": 0,
+    "countGoods": 0,
+    "contents": []
 }

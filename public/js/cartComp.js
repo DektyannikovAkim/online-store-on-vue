@@ -59,7 +59,9 @@ const cartItems = {
     },
 
     template: `
-    <button class="cart-button" type="button" @click="cartShown = !cartShown">Корзина</button>
+    <button class="cart" type="button" @click="cartShown = !cartShown">
+    <div v-show="cartItems.amount !== 0" class="num-of-goods">{{ cartItems.amount }}</div>
+    </button>
     <div class="cart-list" v-show="cartShown">
         <div class="cart-content">
             <button class="close-cart-list" @click="cartShown = !cartShown"></button>

@@ -107,12 +107,27 @@ button {
     color: #f16d7f;
 }
 
-.cart-button {
-    font-size: 27px;
-    padding: 10px;
+.cart {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    text-decoration: none;
+    background: no-repeat url('../img/cart-outline.svg');
+    cursor: pointer;
+}
+
+.num-of-goods {
+    position: absolute;
+    right: -5px;
+    top: -5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    border-radius: 100%;
+    width: 20px;
+    height: 20px;
     background-color: #f16d7f;
-    color: #ffffff;
-    border-radius: 5%;
 }
 
 .cart-list {
