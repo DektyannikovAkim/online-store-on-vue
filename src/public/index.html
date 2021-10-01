@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/vue@next"></script>
     <title>eShop</title>
 
 </head>
@@ -18,7 +18,9 @@
                 </a>
                 <div class="wrapper-for-shopping">
                     <search></search>
-                    <a href="feedback.html" class="form-feedback"></a>
+                    <a href="feedback.html" class="form-feedback">
+                        <img src="img/chatbox.svg" alt="chatbox">
+                    </a>
                     <cart-items ref="cart"></cart-items>
                 </div>
             </div>
@@ -39,13 +41,7 @@
             <span>&#169; Рога и Копыта</span>
         </footer>
     </div>
-    <script src="https://unpkg.com/vue@next"></script>
-    <script src="js/productsComp.js"></script>
-    <script src="js/cartComp.js"></script>
-    <script src="js/searchComp.js"></script>
-    <script src="js/validator.js"></script>
-    <script src="js/preloader.js"></script>
-    <script src="js/main.js"></script>
+
 </body>
 
 </html>

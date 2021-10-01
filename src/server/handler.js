@@ -17,7 +17,6 @@ let handler = (req, res, action, file) => {
                 if (err) {
                     res.sendStatus(404, JSON.stringify({ result: 0, text: err }));
                 } else {
-                    // res.send(JSON.stringify({ result: 1 }))
                     res.send(JSON.stringify(newCart))
                 }
             })

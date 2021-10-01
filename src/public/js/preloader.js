@@ -1,7 +1,5 @@
 'use strict'
 
-// лоадер
-
 function loader() {
     document.body.classList.add('loaded_hiding');
     window.setTimeout(function() {

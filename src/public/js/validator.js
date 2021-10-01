@@ -1,4 +1,4 @@
-const feedbackForm = {
+export const validateForm = {
     data() {
         return {
             patterns: {

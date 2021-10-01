@@ -1,0 +1,42 @@
+{
+    "name": "homework_js_vue",
+    "version": "1.0.0",
+    "description": "Homework_js_pro",
+    "private": true,
+    "dependencies": {
+        "express": "^4.17.1",
+        "nodemon": "^2.0.12",
+        "webpack": "^5.54.0",
+        "webpack-cli": "^4.8.0"
+    },
+    "devDependencies": {
+        "clean-webpack-plugin": "^4.0.0",
+        "copy-webpack-plugin": "^9.0.1",
+        "cross-env": "^7.0.3",
+        "css-loader": "^6.3.0",
+        "file-loader": "^6.2.0",
+        "html-webpack-plugin": "^5.3.2",
+        "image-webpack-loader": "^8.0.1",
+        "style-loader": "^3.3.0",
+        "svg-inline-loader": "^0.8.2",
+        "webpack-dev-server": "^4.3.0",
+        "webpack-node-externals": "^3.0.0"
+    },
+    "scripts": {
+        "dev": "SET NODE_ENV=development&& del dist && webpack --mode development --config webpack.server.config.js && webpack --mode development --config webpack.config.js",
+        "build": "SET NODE_ENV=development&&del dist && webpack --mode production --config webpack.server.config.js && webpack --mode production --config webpack.config.js",
+        "watch": "webpack --mode development --watch",
+        "start": "webpack-dev-server --mode development --open",
+        "startserver": "nodemon dist/server/server.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/DektyannikovAkim/online-store-on-vue.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/DektyannikovAkim/online-store-on-vue/issues"
+    },
+    "homepage": "https://github.com/DektyannikovAkim/online-store-on-vue#readme"
+}

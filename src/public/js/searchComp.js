@@ -1,4 +1,4 @@
-const search = {
+export const search = {
 
     data() {
         return {
@@ -24,7 +24,9 @@ const search = {
     template: `
     <form class="search" @submit.prevent="searchProducts(userSearch)">
         <input type="text" class="search-text" v-model="userSearch">
-        <button class="search-button"></button>
+        <button class="search-button">
+            <img src="img/search.svg" alt="search">
+        </button>
     </form>
     `
 }

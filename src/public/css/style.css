@@ -90,7 +90,8 @@ button {
 .search-button {
     width: 25px;
     height: 25px;
-    background: no-repeat url('../img/search-outline.svg');
+    /* background: no-repeat url('../img/search.svg'); */
+    background: inherit;
 }
 
 .form-feedback {
@@ -98,7 +99,8 @@ button {
     width: 40px;
     height: 40px;
     text-decoration: none;
-    background: no-repeat url('../img/chatbox-ellipses-outline.svg');
+    /* background: no-repeat url('../img/chatbox.svg'); */
+    background-color: inherit;
     cursor: pointer;
 }
 
@@ -112,7 +114,8 @@ button {
     width: 40px;
     height: 40px;
     text-decoration: none;
-    background: no-repeat url('../img/cart-outline.svg');
+    /* background: no-repeat url('../img/cart.svg'); */
+    background-color: inherit;
     cursor: pointer;
 }
 
@@ -159,7 +162,8 @@ button {
     right: 10px;
     width: 40px;
     height: 40px;
-    background: no-repeat url('../img/close-circle-outline.svg');
+    /* background: no-repeat url('../img/close.svg'); */
+    background-color: inherit;
     cursor: pointer;
 }
 
@@ -239,7 +243,7 @@ button {
 
 .remove-product {
     border-radius: 8px 0 0 8px;
-    background: no-repeat url('../img/remove-outline.svg') #ffffff;
+    /* background: no-repeat url('../img/remove.svg') #ffffff; */
     border-right: 1px solid #ddd;
 }
 
@@ -261,7 +265,7 @@ button {
 
 .add-product {
     border-radius: 0 8px 8px 0;
-    background: no-repeat url('../img/add-outline.svg') #ffffff;
+    /* background: no-repeat url('../img/add.svg') #ffffff; */
     border-left: 1px solid #ddd;
 }
 

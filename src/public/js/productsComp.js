@@ -12,7 +12,7 @@ const product = {
     `
 }
 
-const products = {
+export const products = {
     components: {
         'product': product
     },
@@ -30,9 +30,6 @@ const products = {
             if (find) {
                 this.$root.putJson(`/api/cart/${find.id_product}`, { quantity: 1 })
                     .then(data => {
-                        // if (data.result === 1) {
-                        //     find.quantity++;
-                        // }
                         if (data) {
                             this.$root.$refs.cart.cartItems = JSON.parse(data);
                         }
@@ -41,9 +38,6 @@ const products = {
                 product.quantity = 1;
                 this.$root.postJson(`/api/cart`, product)
                     .then(data => {
-                        // if (data.result === 1) {
-                        //     this.$root.$refs.cart.cartItems.contents.push(product);
-                        // }
                         if (data) {
                             this.$root.$refs.cart.cartItems = JSON.parse(data);
                         }
@@ -53,9 +47,9 @@ const products = {
     },
 
     mounted() {
-        this.$parent.getJson(this.catalogUrl)
+        this.$parent.getJson('/api/products')
             .then(data => {
-                for (item of data) {
+                for (let item of data) {
                     item.img = `img/product-${item.id_product}.png`;
                     this.products.push(item);
                 }

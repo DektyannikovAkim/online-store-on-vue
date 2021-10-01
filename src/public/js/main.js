@@ -1,11 +1,15 @@
 'use strict'
+import { cartItems } from "./cartComp";
+import { products } from "./productsComp";
+import { search } from "./searchComp";
+import { validateForm } from "./validator";
 
-const ProductList = {
+export const ProductList = {
     components: {
         'products': products,
         'cart-items': cartItems,
         'search': search,
-        'feedback-form': feedbackForm
+        'feedback-form': validateForm
     },
     methods: {
 
@@ -17,7 +21,6 @@ const ProductList = {
                 })
         },
         postJson(url, data) {
-            console.log(url)
 
             return fetch(url, {
                     method: 'POST',
@@ -32,7 +35,6 @@ const ProductList = {
                 })
         },
         putJson(url, data) {
-            console.log(url)
             return fetch(url, {
                     method: 'PUT',
                     headers: {
@@ -57,8 +59,7 @@ const ProductList = {
                     result.json()
                     this.getJson('/api/cart')
                         .then(data => {
-                            console.log(data)
-                            for (item of data.contents) {
+                            for (let item of data.contents) {
                                 item.img = `img/product-${item.id_product}.png`;
                             }
                             this.$refs.cart.cartItems.amount = data.amount;
@@ -72,5 +73,3 @@ const ProductList = {
         },
     },
 }
-
-Vue.createApp(ProductList).mount('#app');
