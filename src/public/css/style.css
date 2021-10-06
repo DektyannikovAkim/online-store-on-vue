@@ -44,11 +44,6 @@ button {
     }
 }
 
-.loaded_hiding .preloader {
-    transition: 0.3s opacity;
-    opacity: 0;
-}
-
 .header-border {
     border-bottom: solid 1px #ececec;
 }

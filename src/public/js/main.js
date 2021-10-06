@@ -2,14 +2,14 @@
 import { cartItems } from "./cartComp";
 import { products } from "./productsComp";
 import { search } from "./searchComp";
-import { validateForm } from "./validator";
+import { preloader } from "./preloader";
 
 export const ProductList = {
     components: {
         'products': products,
         'cart-items': cartItems,
         'search': search,
-        'feedback-form': validateForm
+        'preloader': preloader
     },
     methods: {
 
@@ -71,5 +71,5 @@ export const ProductList = {
                     console.log(error)
                 })
         },
-    },
+    }
 }
